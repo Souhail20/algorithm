@@ -1,0 +1,22 @@
+ALGORITHM permutation
+VAR
+    c:CHAR;
+    len,words,nbvoy:INTEGER 
+BEGIN
+len=0;
+words=1;
+nbvoy=0;
+WHILE (c<>'.') DO
+  READ(c);
+  len:=len+1;
+  IF (c=' ') THEN
+    words:=words+1;
+  END_IF
+  IF (c:='a' OR c:='e' OR c:='o' OR c:='i' OR c:='u' OR c:='y' OR c:='A' OR c:='E' OR c:='O' OR c:='I' OR c:='U' OR c:='Y'  ) THEN 
+    nbvoy:=nbvoy+1;
+  END_IF
+  WRITE("cette phrase contient",len,"caracters");
+  WRITE("cette phrase contient",words);
+  WRITE("cette phrase contient",nbvoy);
+END_WHILE
+END
